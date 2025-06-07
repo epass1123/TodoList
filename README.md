@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📝 Todo List
 
-## Getting Started
+**Next.js (App Router)** 와 **TypeScript**, **React Query** 기반으로 제작한 심플한 **Todo List 애플리케이션**입니다.  
+**할 일 관리**, **상세 메모 및 이미지 업로드 기능**까지 지원합니다.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ 주요 기능
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ✅ 할 일(Todo) 등록 / 수정 / 삭제
+- ✅ 할 일 완료 처리
+- ✅ 할 일 상세 보기 (메모 입력 + 이미지 업로드 가능)
+- ✅ 반응형 UI (PC / 태블릿 / 모바일 대응)
+- ✅ React Query 기반 글로벌 상태 관리
+- ✅ 이미지 업로드 진행 상태 표시
+- ✅ 외부 API 연동 (Assignment TodoList API 사용)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🙌 사용 방법
 
-## Learn More
+- **로고 버튼 클릭 시 홈 화면으로 이동**합니다.
+- **상단 입력창**에 할 일을 입력하고 **'추가하기' 버튼**을 클릭해 새로운 할 일을 등록할 수 있습니다.
+- **체크 버튼** 클릭 시 해당 할 일이 **완료 상태로 변경**됩니다 (TODO → DONE/DONE → TODO).
+- 완료된 할 일은 **DONE 영역**에 표시됩니다.
+- 할 일 항목 클릭 시 **상세 페이지로 이동**하여:
+  - **할 일 제목 수정**
+  - **메모 입력/수정**
+  - **이미지 업로드**
+  - **할 일 삭제**  
+    를 할 수 있습니다.
+- 이미지 업로드 시 최대 5MB까지 지원하며, 업로드 진행 상태가 표시됩니다.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ 기술 스택
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js** (App Router 구조 사용)
+- **TypeScript**
+- **React Query** (@tanstack/react-query)
+- **Tailwind CSS**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🚀 투두리스트 링크
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- https://todo-list-delta-drab-14.vercel.app/
