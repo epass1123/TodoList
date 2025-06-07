@@ -1,7 +1,7 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
+  --background: #f9fafb;
   --foreground: #171717;
 }
 
@@ -10,6 +10,43 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --color-slate-900: #0f172a;
+  --color-slate-800: #1e293b;
+  --color-slate-500: #64748b;
+  --color-slate-400: #94a3b8;
+  --color-slate-300: #cbd5e1;
+  --color-slate-200: #e2e8f0;
+  --color-slate-100: #f1f5f9;
+
+  --color-primary: #7c3aed;
+  --color-light-primary: #ede9fe;
+  --color-delete: #f43f5e;
+  --color-complete: #bef264;
+  --color-warning: #92400e;
+  --color-bg-base: #f1f5f9;
+  --color-text-base: #0f172a;
+}
+
+@layer components {
+  .text-title {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .text-subtitle {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .text-body {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .text-regular {
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,8 +56,10 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: 'NanumSquare', sans-serif;
+  }
 }
