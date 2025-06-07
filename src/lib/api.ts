@@ -43,7 +43,7 @@ export async function fetchTodoDetail(itemId: number) {
 }
 
 // 투두 수정
-export async function updateTodo(id: number, data: any) {
+export async function updateTodo(id: number, data: unknown) {
   const res = await fetch(`${API_BASE}/${tenantId}/items/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },

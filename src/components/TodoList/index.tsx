@@ -22,9 +22,8 @@ export const TodoList = () => {
       onSuccess: () => setNewTitle(''),
     });
   };
-
   const handleToggleTodo = (id: number, isCompleted: boolean) => {
-    const target = todos.find(t => t.id === id);
+    const target = todos.find((t: { id: number }) => t.id === id);
     if (!target) return;
 
     updateMutation.mutate({
@@ -37,8 +36,8 @@ export const TodoList = () => {
     });
   };
 
-  const todoItems = todos.filter(item => !item.isCompleted);
-  const doneItems = todos.filter(item => item.isCompleted);
+  const todoItems = todos.filter((item: { isCompleted: unknown }) => !item.isCompleted);
+  const doneItems = todos.filter((item: { isCompleted: unknown }) => item.isCompleted);
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error loading todos.</div>;
@@ -74,7 +73,7 @@ export const TodoList = () => {
             </div>
           ) : (
             <div className='space-y-2'>
-              {todoItems.map(item => (
+              {todoItems.map((item: { id: number; name: string; isCompleted: boolean }) => (
                 <div key={item.id} onClick={() => router.push(`/items/${item.id}`)} className='block mb-3 hover:cursor-pointer'>
                   <TodoItem name={item.name} isCompleted={item.isCompleted} onToggle={newChecked => handleToggleTodo(item.id, newChecked)} />
                 </div>
@@ -97,7 +96,7 @@ export const TodoList = () => {
             </div>
           ) : (
             <div className='space-y-2'>
-              {doneItems.map(item => (
+              {doneItems.map((item: { id: number; name: string; isCompleted: boolean }) => (
                 <div key={item.id} onClick={() => router.push(`/items/${item.id}`)} className='block mb-3 hover:cursor-pointer'>
                   <TodoItem name={item.name} isCompleted={item.isCompleted} onToggle={newChecked => handleToggleTodo(item.id, newChecked)} strikeThrough />
                 </div>

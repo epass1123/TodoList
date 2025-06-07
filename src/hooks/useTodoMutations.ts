@@ -13,7 +13,7 @@ export const useTodoMutations = () => {
   });
 
   const updateMutation = useMutation({
-    mutationFn: ({ id, data }: { id: number; data: any }) => updateTodo(id, data),
+    mutationFn: ({ id, data }: { id: number; data: unknown }) => updateTodo(id, data),
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['todos'] });
     },
