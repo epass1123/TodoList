@@ -34,6 +34,7 @@ export default function TodoDetail({ itemId }: TodoDetailProps) {
     }
   }, [data]);
 
+  // 수정 완료 버튼 클릭 시 할 일 수정
   const handleUpdate = () => {
     updateMutation.mutate(
       {
@@ -53,6 +54,7 @@ export default function TodoDetail({ itemId }: TodoDetailProps) {
     );
   };
 
+  // 삭제 버튼 클릭 시 할 일 삭제
   const handleDelete = () => {
     deleteMutation.mutate(itemId, {
       onSuccess: () => {

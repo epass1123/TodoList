@@ -1,5 +1,6 @@
 'use client';
 
+// React Query 프로바이더
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactNode } from 'react';
 

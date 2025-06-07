@@ -16,12 +16,15 @@ export const TodoList = () => {
   const { createMutation, updateMutation } = useTodoMutations();
   const [newTitle, setNewTitle] = useState('');
 
+  // 할 일 추가
   const handleAddTodo = () => {
     if (!newTitle.trim()) return;
     createMutation.mutate(newTitle, {
       onSuccess: () => setNewTitle(''),
     });
   };
+
+  // 할 일 완료 상태 변경
   const handleToggleTodo = (id: number, isCompleted: boolean) => {
     const target = todos.find((t: { id: number }) => t.id === id);
     if (!target) return;

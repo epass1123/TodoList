@@ -1,5 +1,6 @@
 'use client';
 
+// 헤더 컴포넌트
 import Link from 'next/link';
 import Image from 'next/image';
 
