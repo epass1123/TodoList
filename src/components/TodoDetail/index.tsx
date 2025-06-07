@@ -6,7 +6,7 @@ import { useImageUploadMutation } from '@/hooks/useImageUploadMutation';
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { ItemTitle } from '@/components/TodoDetail/ItemTitle';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/common/Button';
 import { ImageUploader } from './ImageUploader';
 import { MemoEditor } from './MemoEditor';
 

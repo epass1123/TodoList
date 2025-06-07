@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { IconButton } from '@/components/IconButton';
+import { IconButton } from '@/components/common/IconButton';
 
 interface ImageUploaderProps {
   imageFile: File | null;

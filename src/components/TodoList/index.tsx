@@ -1,9 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '@/components/Button';
+import { Button } from '@/components/common/Button';
 import { PlusButton } from '@/components/TodoList/PlusButton';
-import { Input } from '@/components/Input';
+import { Input } from '@/components/common/Input';
 import { TodoItem } from '@/components/TodoList/TodoItem';
 import { useTodoMutations } from '@/hooks/useTodoMutations';
 import { useTodoQueries } from '@/hooks/useTodoQueries';

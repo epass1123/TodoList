@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Checkbox } from '@/components/CheckBox';
+import { Checkbox } from '@/components/common/CheckBox';
 
 interface ItemTitleProps {
   name: string;
